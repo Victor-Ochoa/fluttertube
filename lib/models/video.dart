@@ -13,4 +13,15 @@ class Video {
         json["snippet"]["thumbnails"]["high"]["url"],
         json["snippet"]["channelTitle"]);
   }
+
+  Map<String, dynamic> toJson() => {
+        "id": {"videoId": id},
+        "snippet": {
+          "title": title,
+          "thumbnails": {
+            "high": {"url": thumb}
+          },
+          "channelTitle": channel
+        }
+      };
 }

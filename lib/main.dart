@@ -1,5 +1,6 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertube/blocks/favorite_bloc.dart';
 import 'package:fluttertube/blocks/videos_bloc.dart';
 import 'package:fluttertube/screens/home.dart';
 
@@ -13,6 +14,6 @@ class MyApp extends StatelessWidget {
       title: 'Fluttertube',
       home: Home(),
     ),
-    blocs: [Bloc((i) => VideosBloc())],);
+    blocs: [Bloc((i) => VideosBloc()),Bloc((i) => FavoriteBloc())],);
   }
 }
